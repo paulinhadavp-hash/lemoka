@@ -331,6 +331,28 @@
 })();
 </script>
 <script>
+/* Quem chega por anúncio do Google (gclid/gbraid/wbraid na URL): mensagem do WhatsApp identifica a origem */
+(function(){
+  var q = location.search, KEY = 'lemoka_google_ads', veioDoGoogle = false;
+  if (/[?&](gclid|gbraid|wbraid)=/.test(q)) {
+    veioDoGoogle = true;
+    try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+  } else {
+    try { veioDoGoogle = sessionStorage.getItem(KEY) === '1'; } catch (e) {}
+  }
+  if (!veioDoGoogle) return;
+  document.querySelectorAll('a[href*="wa.me/"]').forEach(function(a){
+    var u = a.getAttribute('href'), i = u.indexOf('text=');
+    if (i === -1) return;
+    var txt = decodeURIComponent(u.slice(i + 5));
+    txt = /Vi a promoção/.test(txt)
+      ? 'Olá! Vi o anúncio da promoção de amortecedores no Google e quero um orçamento. Meu carro é: '
+      : txt.replace('Olá!', 'Olá! Vi o anúncio no Google.');
+    a.setAttribute('href', u.slice(0, i + 5) + encodeURIComponent(txt));
+  });
+})();
+</script>
+<script>
 /* Google Ads: conversão "Clique WhatsApp - Site" em qualquer link do WhatsApp */
 (function(){
   document.addEventListener('click', function(e){
