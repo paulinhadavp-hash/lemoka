@@ -18,6 +18,14 @@
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preload" href="assets/fonts/saira-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
+<!-- Google tag (gtag.js) - Google Ads -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18583374624"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18583374624');
+</script>
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -62,6 +70,7 @@
     {"@type":"Question","name":"O que é amortecedor remanufaturado?","acceptedAnswer":{"@type":"Answer","text":"É um amortecedor recuperado: a carcaça é aproveitada e as partes internas que se desgastam são substituídas. Depois ele é testado antes de ser instalado. Custa bem menos que uma peça nova."}},
     {"@type":"Question","name":"O que vem no kit da promoção?","acceptedAnswer":{"@type":"Answer","text":"4 amortecedores remanufaturados, 4 batentes, 4 coifas, 1 alinhamento, 3 revisões e a instalação."}},
     {"@type":"Question","name":"O preço vale para qualquer carro?","acceptedAnswer":{"@type":"Answer","text":"O valor é a partir de R$ 249,90 e varia conforme o modelo do carro. Mande o modelo e o ano pelo WhatsApp para receber o valor exato."}},
+    {"@type":"Question","name":"Dá para parcelar?","acceptedAnswer":{"@type":"Answer","text":"Sim, temos opções de parcelamento. As condições dependem do valor do serviço para o seu carro: consulte pelo WhatsApp junto com o orçamento."}},
     {"@type":"Question","name":"Quando devo trocar os amortecedores?","acceptedAnswer":{"@type":"Answer","text":"Vale revisar a cada 10 mil km. A troca costuma ser necessária entre 40 e 60 mil km, ou antes se o carro balançar demais, bater seco em buracos ou deformar os pneus."}},
     {"@type":"Question","name":"Onde fica a Lemoka?","acceptedAnswer":{"@type":"Answer","text":"Av. Augusto Abílio Távora, 4505, Loja A, Valverde, Nova Iguaçu - RJ, em frente ao Supermarket. Segunda a sexta das 8h30 às 17h30 e sábado das 8h30 às 13h30."}}
   ]
@@ -137,7 +146,7 @@
       <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Instalação inclusa no preço</div>
       <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/></svg>Alinhamento no kit</div>
       <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.3-5.7"/><path d="M4 4v4h4"/></svg>3 revisões depois da troca</div>
-      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Valverde, Nova Iguaçu</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18M7 15h3"/></svg>Parcelamos · consulte</div>
     </div>
   </div>
 
@@ -279,6 +288,7 @@
         <details><summary>O que é amortecedor remanufaturado?</summary><p>É um amortecedor recuperado: a carcaça é aproveitada e as partes internas que se desgastam são substituídas. Depois ele é testado antes de ser instalado. Custa bem menos que uma peça nova.</p></details>
         <details><summary>O que vem no kit da promoção?</summary><p>4 amortecedores remanufaturados, 4 batentes, 4 coifas, 1 alinhamento, 3 revisões e a instalação.</p></details>
         <details><summary>O preço vale para qualquer carro?</summary><p>O valor é a partir de R$ 249,90 e varia conforme o modelo do carro. Mande o modelo e o ano pelo WhatsApp para receber o valor exato.</p></details>
+        <details><summary>Dá para parcelar?</summary><p>Sim, temos opções de parcelamento. As condições dependem do valor do serviço para o seu carro: consulte pelo WhatsApp junto com o orçamento.</p></details>
         <details><summary>Quando devo trocar os amortecedores?</summary><p>Vale revisar a cada 10 mil km. A troca costuma ser necessária entre 40 e 60 mil km, ou antes se o carro balançar demais, bater seco em buracos ou deformar os pneus.</p></details>
         <details><summary>Onde fica a Lemoka?</summary><p>Na Av. Augusto Abílio Távora, 4505, Loja A, no Valverde, em frente ao Supermarket. Segunda a sexta das 8h30 às 17h30 e sábado das 8h30 às 13h30.</p></details>
         <details><summary>Precisa agendar?</summary><p>Sim, chame no WhatsApp antes para reservar o horário e garantir que as peças do seu carro estejam separadas.</p></details>
@@ -318,6 +328,22 @@
   var pv=document.querySelector('.promo-video'),b=document.querySelector('.som');if(!pv||!b)return;
   b.addEventListener('click',function(){pv.muted=!pv.muted;if(!pv.muted){pv.currentTime=0;pv.play();}
     b.setAttribute('aria-pressed',String(!pv.muted));b.querySelector('span').textContent=pv.muted?'Ativar som':'Desativar som';});
+})();
+</script>
+<script>
+/* Google Ads: conversão "Clique WhatsApp - Site" em qualquer link do WhatsApp */
+(function(){
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a || typeof gtag !== 'function') return;
+    if (/wa\.me|api\.whatsapp\.com|web\.whatsapp\.com/i.test(a.href || '')) {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18583374624/2cUgCIjhwLsdEKCWn51F',
+        'value': 1.0,
+        'currency': 'BRL'
+      });
+    }
+  }, true);
 })();
 </script>
 </body>
